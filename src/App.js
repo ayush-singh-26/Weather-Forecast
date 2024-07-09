@@ -72,9 +72,10 @@ function App() {
   return (
     <>
       <Toaster />
-      <div className="w-full min-h-screen flex justify-center items-center bg-gradient-to-r from-gray-800 to-gray-900 text-gray-100">
+      <div className="min-h-screen bg-gradient-to-r from-gray-800 to-gray-900 text-gray-100 flex flex-col justify-center items-center">
+        <h1 className='text-center font-bold text-5xl mb-8'>Weatheryze</h1>
         <div className="w-full max-w-lg p-8 space-y-6 bg-gray-800 rounded-xl shadow-lg">
-          <h1 className="text-center text-gray-100 text-3xl font-bold">Weather Report</h1>
+          <h2 className="text-center text-gray-100 text-3xl font-bold">Weather Report</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
@@ -136,7 +137,7 @@ function App() {
 
           {hourlyForecast.length > 0 && (
             <div>
-              <h1 className="text-center text-gray-100 text-2xl font-bold mb-4">Hourly Forecast</h1>
+              <h2 className="text-center text-gray-100 text-2xl font-bold mb-4">Hourly Forecast</h2>
               <div className="flex space-x-4 overflow-x-auto p-4 bg-gray-700 rounded-md shadow-md">
                 {hourlyForecast.map((item, index) => (
                   <div key={index} className="flex-shrink-0 p-4 text-center rounded-md bg-gray-800 shadow-md">
@@ -155,7 +156,7 @@ function App() {
 
           {dailyForecast.length > 0 && (
             <div>
-              <h1 className="text-center text-gray-100 text-2xl font-bold mb-4">6-Day Forecast</h1>
+              <h2 className="text-center text-gray-100 text-2xl font-bold mb-4">6-Day Forecast</h2>
               <div className="space-y-4">
                 {dailyForecast.map((item, index) => (
                   <div key={index} className="p-4 rounded-md bg-gray-700 shadow-md text-center">
